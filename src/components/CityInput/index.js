@@ -20,7 +20,7 @@ const CityInput = ({city,setCity,fetchCityWeather}) => {
   }
 
   return (
-    <Container>
+    <Container style={{width:"18rem"}}>
       <Form>
         <Form.Group controlId="formBasicEmail">
           <Form.Label>City</Form.Label>

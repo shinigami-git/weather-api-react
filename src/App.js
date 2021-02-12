@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Container } from "react-bootstrap";
 import "./App.css";
 import CityInput from "./components/CityInput";
 import CityWeather from "./components/CityWeather";
@@ -13,9 +14,10 @@ function App() {
     )
       .then((response) => response.json())
       .then((result) => {
-        console.log(result.main);
+        // console.log(result);
         setRender(true);
-        setCityWeather(result.main);
+        setCityWeather(result);
+        
       });
   };
   return (
@@ -25,7 +27,9 @@ function App() {
       setCity={setCity}
       fetchCityWeather={fetchCityWeather}
     />
-     {render && <CityWeather cityWeather={cityWeather}/>}
+    <Container>
+     {render && <CityWeather cityWeather={cityWeather} city={city}/>}
+     </Container>
      </>
   );
 }
