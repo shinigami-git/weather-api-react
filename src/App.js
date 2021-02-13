@@ -10,13 +10,15 @@ function App() {
   const [render, setRender] = useState(false);
   const fetchCityWeather = () => {
     fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=4c496af33d732297c30b641b3b235e47`
+      
+      `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=81446193f07574f5c5c54c5684b35f55`
     )
       .then((response) => response.json())
-      .then((result) => {
-        // console.log(result);
-        setRender(true);
-        setCityWeather(result);
+      .then( (result) => {
+         
+        
+         setCityWeather(result);
+         setRender(true);
         
       });
   };

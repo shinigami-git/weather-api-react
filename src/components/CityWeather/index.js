@@ -4,7 +4,7 @@ import "./style.css";
 
 const CityWeather = ({ cityWeather, city }) => {
 
-console.log(cityWeather);
+// console.log(cityWeather);
 let { humidity, temp_min, temp_max } = cityWeather.main;
 let {dt} =cityWeather;
 let {icon} = cityWeather.weather[0];
