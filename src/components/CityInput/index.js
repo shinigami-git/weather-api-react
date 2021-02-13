@@ -23,7 +23,7 @@ const CityInput = ({city,setCity,fetchCityWeather}) => {
     <Container style={{width:"18rem"}}>
       <Form>
         <Form.Group controlId="formBasicEmail">
-          <Form.Label>City</Form.Label>
+          <Form.Label><h1>City</h1></Form.Label>
           <Form.Control
             value={city}
             type="text"
