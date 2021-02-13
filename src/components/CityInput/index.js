@@ -27,7 +27,7 @@ const CityInput = ({city,setCity,fetchCityWeather}) => {
           <Form.Control
             value={city}
             type="text"
-            placeholder="Enter City"
+            placeholder="Enter City to get Weather Info"
             onChange={handleInputChange}
           />
           <p className="text-danger">{error}</p>
