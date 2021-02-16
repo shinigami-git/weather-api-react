@@ -27,10 +27,10 @@ const CityInput = ({city,setCity,fetchCityWeather}) => {
           <Form.Control
             value={city}
             type="text"
-            placeholder="Enter City"
+            placeholder="Enter City to get Weather Info"
             onChange={handleInputChange}
           />
-          <p className="text-danger">{error}</p>
+          <p className="text-danger"><h6>{error}</h6></p>
         </Form.Group>
 
         <Button variant="primary" onClick={handleSubmit}>Submit</Button>

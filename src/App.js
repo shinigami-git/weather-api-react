@@ -12,12 +12,19 @@ function App() {
     fetch(
       `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=81446193f07574f5c5c54c5684b35f55`
     )
-      .then((response) => response.json())
+      .then((response) => {
+        if(!response.ok){
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
       .then((result) => {
         setCityWeather(result);
         setRender(true);
       })
-      
+      .catch(error=>console.log("Error")
+
+      );
   };
   return (
     <>
